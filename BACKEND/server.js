@@ -33,7 +33,12 @@ app.get("/",(req,res)=>{
     res.send("server working")
 })
 
+// PORT = 8000
+// MONGO_DB_URI = mongodb+srv://mughalrajab26:7MAPPyVnIR4l0Z5a@cluster0.ubkpwem.mongodb.net/chat-app-db?retryWrites=true&w=majority&appName=Cluster0
 
+// JWT_SECRET = "dfghjkl/kkkkljkjlkhkjgjjfhgfhg"
+
+// NODE_ENV =  development
 server.listen(PORT, ()=> {
   connectToMongoDB();
   console.log(`server listning on Port ${PORT}`)
