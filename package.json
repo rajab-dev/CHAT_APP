@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon BACKEND/server.js"
+    "server": "nodemon BACKEND/server.js",
+    "start": "node server.js"
   },
   "type": "module",
   "keywords": [],
