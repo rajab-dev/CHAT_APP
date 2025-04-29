@@ -2,7 +2,7 @@
   "name": "chat_app",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "BACKEND/server.js",
   "scripts": {
     "server": "nodemon BACKEND/server.js",
     "start": "node BACKEND/server.js"
