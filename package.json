@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon BACKEND/server.js",
-    "start": "node server.js"
+    "start": "node BACKEND/server.js"
   },
   "type": "module",
   "keywords": [],
