@@ -13,12 +13,19 @@ import cookieParser from "cookie-parser"
 import connectToMongoDB from "./db/connectToMongoDB.js";
 import bodyParser from 'body-parser';
 import { app, server } from "./socket/socket.js";
-
+import cors from 'cors';
 // const  app = express();
 app.use(bodyParser.text());
 
 
 dotenv.config();
+
+const allowedOrigins = ['https://yaptime.netlify.app'];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 
 app.use(express.json());
 app.use(cookieParser());
@@ -33,10 +40,6 @@ app.get("/",(req,res)=>{
     res.send("server working")
 })
 
-// PORT = 8000
-// MONGO_DB_URI = mongodb+srv://mughalrajab26:7MAPPyVnIR4l0Z5a@cluster0.ubkpwem.mongodb.net/chat-app-db?retryWrites=true&w=majority&appName=Cluster0
-
-// JWT_SECRET = "dfghjkl/kkkkljkjlkhkjgjjfhgfhg"
 
 // NODE_ENV =  development
 server.listen(PORT, ()=> {
