@@ -12,7 +12,7 @@ const useGetConversation = () => {
       
     try {
        
-      const res = await fetch("/api/user")
+      const res = await fetch("https://chat-app-fr04.onrender.com/api/user",{credentials: 'include'})
       const data = await res.json();
 
       if(data.error){

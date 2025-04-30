@@ -17,9 +17,10 @@ const useSendMessage = () => {
      setloading(true)
     try {
       
-      const res = await axios.post(`/api/messages/send/${selectedConversation._id}`,
+      const res = await axios.post(`https://chat-app-fr04.onrender.com/api/messages/send/${selectedConversation._id}`,
       message,
-      {
+      { method:"POST",
+        withCredentials: true,
         headers: {
           'Content-Type': 'text/plain',
         },

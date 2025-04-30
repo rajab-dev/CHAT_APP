@@ -10,7 +10,7 @@ const generateTokenAndSetCookie = (userid, res) => {
 
       maxAge: 15 * 24 * 60 * 60 * 1000,
       httpOnly: true,
-      sameSite: "none",
+      sameSite: "none", // use strict if development
       secure: process.env.NODE_ENV !== "development"
     })
 

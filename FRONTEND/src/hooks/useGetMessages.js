@@ -12,7 +12,7 @@ const useGetMessages = () => {
         
         setloading(true)
         try {
-          const res = await fetch(`/api/messages/${selectedConversation._id}`)
+          const res = await fetch(`https://chat-app-fr04.onrender.com/api/messages/${selectedConversation._id}`,{credentials: 'include'})
           const data = await res.json();
           if(data.error){
             throw new Error(data.error)
