@@ -9,6 +9,7 @@ export default defineConfig({
     proxy:{
       "/api":{
         target: "https://chat-app-fr04.onrender.com"
+        // target: "http://localhost:5000"
       }
     }
   }

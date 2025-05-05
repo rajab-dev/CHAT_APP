@@ -21,6 +21,7 @@ app.use(bodyParser.text());
 dotenv.config();
 
 const allowedOrigins = ['https://yaptime.netlify.app'];
+// const allowedOrigins = ['http://localhost:3000'];
 
 app.use(cors({
   origin: allowedOrigins,

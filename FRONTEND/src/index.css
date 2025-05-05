@@ -59,3 +59,30 @@ body{
 		transform: translate3d(4px, 0, 0);
 	}
 }
+/* Ensures proper word wrapping in all browsers */
+/* .chat-bubble {
+	word-wrap: break-word;
+	word-break: normal;
+	overflow-wrap: break-word;
+	hyphens: none;
+  } */
+
+  /* Base word wrapping rules */
+.chat-bubble {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: manual;
+  }
+  
+  /* Mobile-specific word breaking */
+  @media (max-width: 640px) {
+	.chat-bubble {
+	  /* Normal behavior for most text */
+	  word-break: normal;
+	  
+	  /* Emergency break for extremely long words */
+	  &.break-all {
+		word-break: break-all;
+	  }
+	}
+  }

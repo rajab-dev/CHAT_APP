@@ -13,6 +13,7 @@ const useLogOut = () => {
     try {
       
      const res = await fetch("https://chat-app-fr04.onrender.com/api/auth/logout",{
+      // const res = await fetch("http://localhost:5000/api/auth/logout",{
       credentials: 'include',
        method:"POST",
        headers: {"Content-Type": "application/json"},

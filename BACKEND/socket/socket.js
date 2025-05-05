@@ -8,6 +8,7 @@ const server = http.createServer(app)
 const io = new Server(server,{
   cors:{
     origin:"https://yaptime.netlify.app",
+    // origin:"http://localhost:3000",
     credentials:true,
     methods:["GET","POST"]
   },
