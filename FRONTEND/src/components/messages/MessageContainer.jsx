@@ -54,8 +54,8 @@ const MessageContainer = () => {
 			<>
 			  {/* Header */}
 			  <div className='bg-slate-500 px-3 py-2 sm:px-4 sm:py-3 flex items-center'>
-				<span className='label-text text-xs sm:text-sm'>To:</span> 
-				<span className='text-gray-900 font-bold text-sm sm:text-base ml-1 truncate'>
+				<span className='label-text text-xs sm:text-sm'>      </span> 
+				<span className='text-gray-900 font-bold text-sm sm:text-base ml-5 truncate'>
 				  {selectedConversation?.fullName}
 				</span>
 			  </div>
@@ -66,11 +66,38 @@ const MessageContainer = () => {
 		  )}
 		</div>
 	  );
+	// return (
+	// 	<div className="flex flex-col h-full">
+	// 	  {/* Chat header */}
+	// 	  <div className="bg-slate-600 p-3 text-white flex items-center sm:hidden">
+	// 		<h2 className="font-semibold">{selectedConversation?.fullName}</h2>
+	// 	  </div>
+		  
+	// 	  {/* Messages area */}
+	// 	  <div className="flex-1 overflow-y-auto p-2 bg-gray-100">
+	// 		{/* Your messages list here */}
+	// 		<div className="space-y-2">
+	// 		  {/* Example message */}
+	// 		  <div className="chat chat-start">
+	// 			<div className="chat-image avatar">
+	// 			  <div className="w-10 rounded-full">
+	// 				<img src={selectedConversation?.avatar} alt="User avatar" />
+	// 			  </div>
+	// 			</div>
+	// 		 		  <Messages />
+	// 				  <MessageInput />
+	// 		  </div>
+	// 		</div>
+	// 	  </div>
+		  
+
+	// 	</div>
+	//   );
 };
 export default MessageContainer;
 
 
-const NoChatSelected = () => {
+export const NoChatSelected = () => {
 	const { authUser } = useAuthContext();
 	// return (
 	// 	<div className='flex items-center justify-center w-full h-full'>
